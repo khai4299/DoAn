@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewData["Title"] = "ChuyenKho";
+}
+    <div @*style="height: 250px; background-color: white"*@  >
+
+        <div class="item">
+            <label class="label-item">Kho xuat</label>
+            <select class="custom-select-sm item-PhieuNhap">
+                <option selected disabled>Chon kho nhap</option>
+                <option value="kho1">Kho 1</option>
+                <option value="kho2">Kho 2</option>
+            </select>
+            <label class="label-item">Kho xuat</label>
+            <select class="custom-select-sm item-PhieuNhap">
+                <option selected disabled>Chon kho nhap</option>
+                <option value="kho1">Kho 1</option>
+                <option value="kho2">Kho 2</option>
+            </select>
+            <label class="label-item">Ghi chu</label>
+            <input class="item-PhieuNhap" type="text" id="ghichu" name="ghichu" placeholder="">
+        </div>
+        <div>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th style="width: 150px">STT</th>
+                        <th style="width: 200px">Ma san pham</th>
+                        <th style="width: 200px">Ten san pham</th>
+                        <th style="width: 150px">VAT</th>
+                        <th style="width: 150px">ĐVT</th>
+                        <th style="width: 150px">Số lượng</th>
+                        <th class="last-item">Xoa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td class="last-item"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="button-Border-ThemSanPham">
+                <a class="button-ThemSanPham" asp-area="" asp-controller="Home" asp-action="Privacy">Tra cuu phieu nhap</a>
+            </div>
+        </div>
+
+        <div>
+
+            <a class="nav-link button-Luu" style="margin-top:50px" asp-area="" asp-controller="Home" asp-action="Privacy">Luu</a>
+            <a class="nav-link button-Boqua" style="margin-top:50px" asp-area="" asp-controller="Home" asp-action="Index">Bo qua</a>
+        </div>
+
+    </div>
+
+
