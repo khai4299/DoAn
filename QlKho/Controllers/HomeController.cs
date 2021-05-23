@@ -18,13 +18,21 @@ namespace QlKho.Controllers
         {
             _logger = logger;
         }
-
+       
         public IActionResult Index()
         {
             return View();
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+        public IActionResult BanHang()  /// Tran them man hinh ban hang
+        {
+            return View();
+        }
+        public IActionResult ProductInfo()  /// Tran them man hinh hien san pham khi ban hang
         {
             return View();
         }

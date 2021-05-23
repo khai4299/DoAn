@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "TaoPhieuXuat";
+}
+
+
+<div class="item">
+    <label class="label-item">Nhập mã sản phẩm </label>
+    <input class="item-PhieuNhap" type="text" id="maphieunhap" name="maphieunhap" placeholder="">
+    <label class="label-item">Kho xuat</label>
+    <select class="custom-select-sm item-PhieuNhap">
+        <option selected disabled>Chon kho xuat</option>
+        <option value="kho1">Kho 1</option>
+        <option value="kho2">Kho 2</option>
+    </select>
+    <div class="button-Border-ThemSanPham">
+        <a class="button-ThemSanPham" asp-area="" asp-controller="Home" asp-action="ProductInfo">Tra cuu san pham</a>
+    </div>
+</div>
+
