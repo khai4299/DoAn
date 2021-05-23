@@ -248,4 +248,7 @@ C:\Users\HP\Documents\for_cloneing\DoAnKho\QlKho\obj\Debug\netcoreapp3.1\QlKho.V
 C:\Users\HP\Documents\for_cloneing\DoAnKho\QlKho\obj\Debug\netcoreapp3.1\QlKho.csproj.CopyComplete
 C:\Users\HP\Documents\for_cloneing\DoAnKho\QlKho\obj\Debug\netcoreapp3.1\QlKho.genruntimeconfig.cache
 C:\Users\HP\Documents\for_cloneing\DoAnKho\QlKho\obj\Debug\netcoreapp3.1\Razor\Views\Home\BanHang.cshtml.g.cs
-C:\Users\HP\Documents\for_cloneing\DoAnKho\QlKho\obj\Debug\netcoreapp3.1\Razor\Views\Home\ProductInfo.cshtml.g.cs
+C:\Users\HP\Documents\for_cloneing\DoAnKho\QlKho\obj\Debug\netcoreapp3.1\QlKho.csprojAssemblyReference.cache
+C:\Users\HP\Documents\for_cloneing\DoAnKho\QlKho\obj\Debug\netcoreapp3.1\Razor\Views\Home\ProductInfo1.cshtml.g.cs
+C:\Users\HP\Documents\for_cloneing\DoAnKho\QlKho\obj\Debug\netcoreapp3.1\Razor\Views\Home\TonKho.cshtml.g.cs
+C:\Users\HP\Documents\for_cloneing\DoAnKho\QlKho\obj\Debug\netcoreapp3.1\Razor\Views\Home\TraCuuPhieuThu.cshtml.g.cs

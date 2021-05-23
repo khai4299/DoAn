@@ -159,6 +159,14 @@
     border: 1px solid gray;
     width: 150px;
 }
+.item-nhap-min {
+    margin-top: 10px;
+    border-radius: 1px;
+    border: 1px solid gray;
+    width: 150px;
+    height: 30px;
+    font-size: 18pt;
+}
 .item-TraCuu {
     margin-top: 10px;
     border-radius: 3px;
@@ -170,6 +178,12 @@
     margin-left: 25px;
     margin-top: 10px;
     width: 150px;
+}
+.label-text {
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-top: 10px;
+    width: 50px;
 }
 .item-Ghichu {
     margin-top: 10px;
@@ -192,6 +206,17 @@
     padding: 10px 10px;
     display: inline-block;
     margin-left: 25px;
+}
+.button-ThemSP {
+    margin-top: 5px;
+    background-color: #009879;
+    color: white;
+    border-radius: 5px;
+    width: 10000px;
+    padding: 10px 10px;
+    display: inline-block;
+    margin-left: 25px;
+    text-align: center;
 }
 
 /* style them tu tren mang */

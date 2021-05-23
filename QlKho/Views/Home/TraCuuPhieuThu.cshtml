@@ -1,0 +1,141 @@
+﻿
+@{
+    ViewData["Title"] = "Xuat Ban tai sieu thi";
+}
+
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 style="text-align:center;"> Tra cứu phiếu thu chi </h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+</div>
+<div class="item">
+    <label class="label-item" style="width: 100px">Ngày thu/chi</label>
+    <input class="item-nhap-min" type="text" id="hoten" name="hoten" placeholder="">
+    <label class="label-text" style="width: 50px">Kho</label>
+    <input class="item-nhap-min" type="text" id0"sdt" name="sdt" placeholder="">
+    <label class="label-text" style="width: 150px;margin-top: 10px;">Chứng từ liên quan</label>
+    <input class="item-nhap-min" type="text" id="diachi" name="diachi" placeholder="">
+    <label class="label-text" style="width: 100px;margin-top: 10px;">Tên đối tác</label>
+    <input class="item-nhap-min" type="text" id="diachi" name="diachi" placeholder="">
+</div>
+<div>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+</div>
+<div class="item">
+    <label class="label-text" style="width: 100px">Mã phiếu thu/chi</label>
+    <input class="item-nhap-min" type="text" id="ngayxuat" name="ngayxuat" placeholder="">
+    <label class="label-text" style="width: 100px;margin-top: 10px;">Trạng thái</label>
+    <select class="custom-select-sm item-PhieuNhap">
+        <option selected disabled>Chon trang thai</option>
+        <option value="kho1">Đã thanh toán</option>
+        <option value="kho2">Chưa thanh toán</option>
+        <option value="kho3">Đã hủy</option>
+    </select>
+ 
+</div>
+<div>
+    <h2></h2>
+</div>
+
+<div>
+    <h2></h2>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+
+            <a class="button-ThemSP" style="width: 200px" asp-area="" asp-controller="Home" asp-action="Privacy">Tìm kiếm</a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <table class="content-table">
+        <thead>
+            <tr>
+                 
+                <th style="width: 200px">Tên đối tác</th>
+
+                <th style="width: 200px">SDT </th>
+                <th style="width: 200px">Ngày thu</th>
+                <th style="width: 200px">Tiền thanh toán </th>
+                <th style="width: 200px">Tiền nợ </th>
+                <th style="width: 150px">Kho</th>
+                <th style="width: 150px">Chứng từ liên quan</th>
+                <!--    <th style="width: 150px">Mã đơn hàng </th> -->
+                <th style="width: 200px">Ghi chú</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Samsung </td>
+                <td>899899</td>
+                <td>26/12/2020</td>
+                <td>1000000</td>
+                <td>2000</td>
+                <td>Kho HCM1</td>
+                <td>phieumuahang</td>
+                <td>còn nợ</td>
+                
+                <!--     <td>7</td>
+    <td>8</td>
+    <td>9</td>
+    <td class="last-item"></td> -->
+            </tr>
+
+        </tbody>
+    </table>
+
+    <!--
+        <div class="button-Border-ThemSanPham">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <a class="button-ThemSanPham" asp-area="" asp-controller="Home" asp-action="Privacy">Xuất bán</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+    <div>
+        <table class="table-right">
+            <tr>
+                <th class="row-table-right" scope="row">Tong tien hang</th>
+                <td>0d</td>
+            </tr>
+            <tr>
+                <th class="row-table-right" scope="row">Tien thue GTGT</th>
+                <td>0d</td>
+            </tr>
+            <tr>
+                <th class="row-table-right" scope="row">Tong tien</th>
+                <td>0d</td>
+            </tr>
+        </table>
+
+    </div>
+
+        -->
+
+
+    <div class="row">
+        <div class="col-md-13">
+
+            <a class="nav-link button-Luu" style="width: 100px" asp-area="" asp-controller="Home" asp-action="Privacy">Xuất EXEL </a>
+
+        </div>
+    </div>

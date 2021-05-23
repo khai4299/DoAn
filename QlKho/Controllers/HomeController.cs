@@ -32,7 +32,11 @@ namespace QlKho.Controllers
         {
             return View();
         }
-        public IActionResult ProductInfo()  /// Tran them man hinh hien san pham khi ban hang
+        public IActionResult TonKho()  /// Tran them man hinh hien san pham khi ban hang
+        {
+            return View();
+        }
+        public IActionResult TraCuuPhieuThu()  /// Tran them man hinh hien san pham khi ban hang
         {
             return View();
         }
