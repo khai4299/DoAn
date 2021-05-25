@@ -1,93 +1,141 @@
-﻿
+﻿@model QlKho.Models.TaoPhieuNhap
 @{
     ViewData["Title"] = "TaoPhieuNhap";
 }
-
-
-<div class="item">
-    <label class="label-item">Ma phieu nhap</label>
-    <input class="item-PhieuNhap" type="text" id="maphieunhap" name="maphieunhap" placeholder="">
-    <label class="label-item">Kho nhap</label>
-    <select class="custom-select-sm item-PhieuNhap">
-        <option selected disabled>Chon kho nhap</option>
-        <option value="kho1">Kho 1</option>
-        <option value="kho2">Kho 2</option>
-    </select>
-</div>
-<div class="item">
-    <label class="label-item">Kho nhap</label>
-    <select class="custom-select-sm item-PhieuNhap">
-        <option selected disabled>Chon kho nhap</option>
-        <option value="kho1">Kho 1</option>
-        <option value="kho2">Kho 2</option>
-    </select>
-    <label class="label-item">Dia chi</label>
-    <input class="item-PhieuNhap" type="text" id="diachi" name="diachi" placeholder="">
-    <label class="label-item">So dien thoai</label>
-    <input class="item-PhieuNhap" type="text" id="sdt" name="sdt" placeholder="">
-    <label class="label-item">Ma so thue</label>
-    <input class="item-PhieuNhap" type="text" id="masothue" name="masothue" placeholder="">
-</div>
-<div class="item">
-    <label class="label-Ghichu">Ghi chu</label>
-    <input class="item-Ghichu" type="text" id="ghichu" name="ghichu" placeholder="">
-</div>
-<div>
-    <table class="content-table">
-        <thead>
-            <tr>
-                <th style="width: 150px">STT</th>
-                <th style="width:400px">Hinh thuc</th>
-                <th style="width: 200px">Ma san pham</th>
-                <th style="width: 200px">Ten san pham</th>
-                <th style="width: 150px">VAT</th>
-                <th style="width: 150px">ĐVT</th>
-                <th style="width: 150px">Số lượng</th>
-                <th style="width: 150px">Giá nhập</th>
-                <th style="width: 150px">Thanh tien</th>
-                <th class="last-item">Xoa</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td class="last-item"></td>
-            </tr>
-
-        </tbody>
-    </table>
-    <div class="button-Border-ThemSanPham">
-        <a class="button-ThemSanPham" asp-area="" asp-controller="Home" asp-action="Privacy">Tra cuu phieu nhap</a>
+<form asp-action="">
+    <div class="item">
+        <div class="form-group">
+            <label asp-for="pi.INPUTVOUCHERID" class="label-item">Ma phieu nhap</label>
+            <input asp-for="pi.INPUTVOUCHERID" class="item-PhieuNhap" />
+        </div>
+        <div class="form-group">
+            <label asp-for="pi.AUTOSTORECHANGETOSTOREID" class="label-item">Kho nhap</label>
+            <select asp-for="pi.AUTOSTORECHANGETOSTOREID" class="custom-select-sm item-PhieuNhap">
+                <option selected disabled>Chon kho nhap</option>
+                @foreach (var item in Model.pS)
+                {
+                    <option value=@item.STOREID>@item.STOREID</option>
+                }
+            </select>
+        </div>
     </div>
-</div>
-<div>
-    <table class="table-right">
-        <tr>
-            <th class="row-table-right" scope="row">Tong tien hang</th>
-            <td>0d</td>
-        </tr>
-        <tr>
-            <th class="row-table-right" scope="row">Tien thue GTGT</th>
-            <td>0d</td>
-        </tr>
-        <tr>
-            <th class="row-table-right" scope="row">Tong tien</th>
-            <td>0d</td>
-        </tr>
-    </table>
+    <div class="item">
+        <div class="form-group">
+            <label asp-for="pi.CUSTOMERNAME" class="label-item">Ma/Ten Khach Hang</label>
+            <input asp-for="pi.CUSTOMERNAME" class="item-PhieuNhap" />
+        </div>
+        <div class="form-group">
+            <label asp-for="pi.CUSTOMERADDRESS" class="label-item">Dia chi</label>
+            <input asp-for="pi.CUSTOMERADDRESS" class="item-PhieuNhap" />
+        </div>
+        <div class="form-group">
+            <label asp-for="pi.CUSTOMERPHONE" class="label-item">So dien thoai</label>
+            <input asp-for="pi.CUSTOMERPHONE" class="item-PhieuNhap" />
+        </div>
+        <div class="form-group">
+            <label asp-for="pi.TAXID" class="label-item">Ma so thue</label>
+            <input asp-for="pi.TAXID" class="item-PhieuNhap" />
+        </div>
+    </div>
+    <div>
+        <div class="form-group">
+            <label asp-for="pi.CHECKREALINPUTNOTE" class="label-Ghichu">Ma so thue</label>
+            <input asp-for="pi.CHECKREALINPUTNOTE" class="item-Ghichu" />
+        </div>
+    </div>
+    <div>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th style="width: 150px">STT</th>
+                    <th style="width:400px">Hinh thuc</th>
+                    <th style="width: 200px">Ma san pham</th>
+                    <th style="width: 200px">Ten san pham</th>
+                    <th style="width: 150px">VAT</th>
+                    <th style="width: 150px">ĐVT</th>
+                    <th style="width: 150px">Số lượng</th>
+                    <th style="width: 150px">Giá nhập</th>
+                    <th style="width: 150px">Thanh tien</th>
+                    <th class="last-item">Xoa</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.ispt != null)
+                {
+                    var i = 0;
+                    @foreach (var item in Model.ispt)
+                    {
+                        i++;
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.masp</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="last-item"></td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+        <div class="button-Border-ThemSanPham">
+            <a class="button-ThemSanPham" data-toggle="modal" data-target=".bootstrapmodal">Them san pham</a>
+        </div>
+        <div class="modal fade bootstrapmodal" id="addSP">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        Hello;
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label asp-for="spt.masp" class="label-Ghichu">Ma sp</label>
+                            <input asp-for="spt.masp" id="masp" class="item-Ghichu" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-save="modal" type="submit" id="submit" value="submit" formaction="ThemSanPham"></button>
+                        <button class="btn btn-defaut" data-dismiss="modal">cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <table class="table-right">
+            <tr>
+                <th class="row-table-right" scope="row">Tong tien hang</th>
+                <td>0d</td>
+            </tr>
+            <tr>
+                <th class="row-table-right" scope="row">Tien thue GTGT</th>
+                <td>0d</td>
+            </tr>
+            <tr>
+                <th class="row-table-right" scope="row">Tong tien</th>
+                <td>0d</td>
+            </tr>
+        </table>
 
-</div>
+    </div>
 
-<div>
-    
-    <a class="nav-link button-Luu" asp-area="" asp-controller="Home" asp-action="Privacy">Luu</a>
-    <a class="nav-link button-Boqua" asp-area="" asp-controller="Home" asp-action="Index">Bo qua</a>
-</div>
+    <div>
+        <input class="nav-link button-Luu" type="submit" value="Luu" formaction="TaoPhieuNhap" />
+        @*<a class="nav-link button-Luu" asp-area="" asp-controller="Home" type="">Luu</a>*@
+        <a class="nav-link button-Boqua" asp-area="" asp-controller="Home" asp-action="Index">Bo qua</a>
+    </div>
+
+</form>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+    $("submit").ready(function ())
+    {
+
+    }
+    reset
+</script>

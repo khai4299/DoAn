@@ -5,20 +5,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using QlKho.Interface;
 using QlKho.Models;
 
 namespace QlKho.Controllers
 {
     public class HomeController : Controller
     {
-        
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        IService service;
+        public HomeController(IService _service)
         {
-            _logger = logger;
+            service = _service;
         }
-       
         public IActionResult Index()
         {
             return View();
@@ -42,11 +40,43 @@ namespace QlKho.Controllers
         }
         public IActionResult TaoPhieuNhap()
         {
-            return View();
+            //dynamic mymodel = new ExpandoObject();
+            //mymodel.PM_STORE = service.GetAllStore();
+            //mymodel.PM_INPUTORDER = service.GetAllPM_INPUTORDER();
+            TaoPhieuNhap mymodel = new TaoPhieuNhap();
+            mymodel.pS = service.GetAllStore();
+            list.Clear();
+            return View(mymodel);
+        }
+        [HttpPost]
+        public IActionResult TaoPhieuNhap(PM_INPUTORDER pi)
+        {
+            service.TaoPhieuNhap(pi);
+            return RedirectToAction(nameof(Index));
+        }
+        public static List<SP_TaoPhieuNhap> list = new List<SP_TaoPhieuNhap>();
+        public IActionResult ThemSanPham(PM_INPUTORDER pi, SP_TaoPhieuNhap spt)
+        {
+            Debug.WriteLine("Log" + list.Count);
+            TaoPhieuNhap mymodel = new TaoPhieuNhap();
+            mymodel.pS = service.GetAllStore();
+            mymodel.ispt = service.GetAllThemSanPham(list, spt);
+            mymodel.tpnt = new TaoPhieuNhap_Temp();
+            mymodel.pi = pi;
+            service.TaoPhieuNhap_Temp(mymodel.tpnt, mymodel);
+            return View("TaoPhieuNhap", mymodel);
         }
         public IActionResult TaoPhieuXuat()
         {
-            return View();
+            TaoPhieuXuat mymodel = new TaoPhieuXuat();
+            mymodel.pS = service.GetAllStore();
+            return View(mymodel);
+        }
+        [HttpPost]
+        public IActionResult TaoPhieuXuat(PM_OUTPUTVOUCHER po)
+        {
+            service.TaoPhieuXuat(po);
+            return RedirectToAction(nameof(Index));
         }
         public IActionResult ChuyenKho()
         {
@@ -54,11 +84,39 @@ namespace QlKho.Controllers
         }
         public IActionResult TraCuuPhieuNhap()
         {
-            return View();
+            TraCuuPhieuNhap mymodel = new TraCuuPhieuNhap();
+            mymodel.pS = service.GetAllStore();
+            mymodel.TuNgay = DateTime.Today;
+            mymodel.DenNgay = mymodel.TuNgay.AddDays(1);
+            return View(mymodel);
+        }
+        [HttpPost]
+        public IActionResult TraCuuPhieuNhap(TraCuuPhieuNhap traCuuPhieuNhap)
+        {
+            TraCuuPhieuNhap mymodel = new TraCuuPhieuNhap();
+            mymodel.pS = service.GetAllStore();
+            mymodel.pi = service.TraCuuPhieuNhap(traCuuPhieuNhap);
+            return View(mymodel);
         }
         public IActionResult TraCuuPhieuXuat()
         {
-            return View();
+            TraCuuPhieuXuat mymodel = new TraCuuPhieuXuat();
+            mymodel.pS = service.GetAllStore();
+            mymodel.TuNgay = DateTime.Today;
+            mymodel.DenNgay = mymodel.TuNgay.AddDays(1);
+            return View(mymodel);
+        }
+        [HttpPost]
+        public IActionResult TraCuuPhieuXuat(TraCuuPhieuXuat traCuuPhieuXuat)
+        {
+            TraCuuPhieuXuat mymodel = new TraCuuPhieuXuat();
+            mymodel.pS = service.GetAllStore();
+            mymodel.po = service.TraCuuPhieuXuat(traCuuPhieuXuat);
+            foreach (var item in mymodel.po)
+            {
+                Debug.WriteLine(item.OUTPUTVOUCHERID);
+            }
+            return View(mymodel);
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
