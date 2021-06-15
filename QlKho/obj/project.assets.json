@@ -6835,19 +6835,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\DoAn\\QlKho\\QlKho.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Documents\\for_cloneing\\DoAn_khaiud\\QlKho\\QlKho.csproj",
       "projectName": "QlKho",
-      "projectPath": "C:\\Users\\HP\\Desktop\\DoAn\\QlKho\\QlKho.csproj",
+      "projectPath": "C:\\Users\\HP\\Documents\\for_cloneing\\DoAn_khaiud\\QlKho\\QlKho.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\DoAn\\QlKho\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Documents\\for_cloneing\\DoAn_khaiud\\QlKho\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\HP\\Desktop\\DoAn\\NuGet.Config",
+        "C:\\Users\\HP\\Documents\\for_cloneing\\DoAn_khaiud\\NuGet.Config",
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -6859,6 +6863,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -6870,6 +6875,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
@@ -6898,7 +6904,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
